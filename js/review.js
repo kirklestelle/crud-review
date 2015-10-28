@@ -77,12 +77,14 @@ var addItem = function(item) {
 	var downRating = $("<button id='downRating'><span class='glyphicon glyphicon-thumbs-down'></span></button>");
 	var statistics = $("<p id='statistics'></p>");
 
+	// Deletes review on click
 	deleteRating.click(function() {
 		item.destroy({
 			success: getData()
 		})
 	})
 
+	// Upvotes review on click
 	upRating.click(function() {
 		item.set("totalVotes", totalVotes += 1);
 		item.set("upVotes", upVotes += 1);
@@ -90,12 +92,14 @@ var addItem = function(item) {
 		getData();
 	});
 
+	// Downvotes review on click
 	downRating.click(function() {
 		item.set("totalVotes", totalVotes += 1);
 		item.save();
 		getData();
 	});
 
+	// Sets individual review's title, review content, rating, and rating statistics
 	userRating.raty({score: rating, readOnly: true});
 	userTitle.text(title);
 	userReview.text(review);
