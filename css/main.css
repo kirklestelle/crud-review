@@ -1,0 +1,97 @@
+#centerSection {
+	text-align: center;
+}
+
+h1 {
+	font-size: 1.8em;
+}
+
+h3 {
+	font-size: 1.4em;
+}
+
+h4 {
+	font-size: 1.4em; 
+}
+
+h5 {
+	font-size: 1em;
+}
+
+#Macbook {
+	background: url(../img/Macbook-Air-sm.jpg) no-repeat;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	height: 180px; 
+}
+
+ol {
+	margin: 0px;
+	padding: 0px;
+}
+
+#userReviews {
+    background-color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#statistics {
+	font-size: 0.9em;
+}
+
+#deleteRating {
+	float: right;
+}
+
+#upRating {
+	float: right;
+	font-size: 0.9em;
+}
+
+#downRating {
+	float: right;
+	font-size: 0.9em;
+}
+
+#list {
+	list-style-type: none;
+}
+
+@media screen and (min-width: 992px) {
+	#Macbook {
+		background: url(../img/Macbook-Air-md.jpg) no-repeat;
+		width: 400px;
+		height: 240px;
+	}	
+
+	h1 {
+		font-size: 3em;
+	}
+
+	h3 {
+		font-size: 1.8em;
+	}
+
+	h4 {
+		font-size: 1.8em; 
+	}
+
+	h5 {
+		font-size: 1.4em;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#Macbook {
+		background: url(../img/Macbook-Air-lg.jpg) no-repeat;
+		width: 500px;
+		height: 300px;
+	}	
+}	
+
+

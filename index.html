@@ -1,0 +1,71 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Description, Author, Title -->
+    <meta name="description" content="A webpage to review Apple's Macbook Air 13.3 inch 1.6GHz 128GB Laptop">
+    <meta name="author" content="Sally Li">   
+    <title>Review Macbook Air 13.3" 1.6GHz 128GB</title>
+
+    <!-- jQuery, Bootstrap, Raty -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css"></link>
+
+    <script src="jquery.raty.js"></script>
+    <link rel="stylesheet" href="jquery.raty.css"></link>    
+
+    <!-- Parse Library-->
+    <script src="//www.parsecdn.com/js/parse-1.6.0.min.js"></script>
+
+    <!-- Custom files -->
+    <link rel="stylesheet" href="css/main.css"/></link>
+    </head>
+
+    <body>
+        <section id="centerSection">
+            <div class="container">
+                <h1>Macbook Air 13.3" 1.6GHz 128GB</h1>
+                <div id="Macbook"></div>
+                <h4>Average Rating:</h4><div id="averageRating" class="raty"></div>
+                <h4>1.6GHz Processor <br>
+                    128 GB Storage </h4>
+                <h5>    
+                    1.6GHz dual-core Intel Core i5 processor <br>
+                    Turbo Boost up to 2.7GHz <br>
+                    Intel HD Graphics 6000 <br>
+                    4GB memory<br>
+                    128GB PCIe-based flash storage1</h5>
+            </div>
+       
+            <div class="container">
+                <h3>Write a Review Below</h3>
+                <div id="rating" class="raty">
+                </div><br>    
+
+                <form>
+                    <fieldset class="form-group">
+                    <input class="form-control" id="title" placeholder="a title for your review"></input>
+                    </fieldset>
+                    <fieldset class="form-group">
+                    <textarea class="form-control" rows="3" id="review" placeholder="what did you think of this?"></textarea>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary">Submit Review
+                    </button>
+                </form>    
+            </div>
+        </section> 
+
+        <section>
+            <div class="container">
+                <ol id="list"  list-style-type="none">
+                </ol>
+            </div>
+        </section>   
+
+        <script type="text/javascript" src="js/review.js"></script> 
+    </body>
+</html>    
