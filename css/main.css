@@ -41,21 +41,22 @@ ol {
 }
 
 #statistics {
-	font-size: 0.9em;
+	font-size: 0.7em;
 }
 
 #deleteRating {
 	float: right;
+	font-size: 0.6em;
 }
 
 #upRating {
 	float: right;
-	font-size: 0.9em;
+	font-size: 0.5em;
 }
 
 #downRating {
 	float: right;
-	font-size: 0.9em;
+	font-size: 0.5em;
 }
 
 #list {
@@ -83,6 +84,23 @@ ol {
 
 	h5 {
 		font-size: 1.4em;
+	}
+
+	#deleteRating {
+		font-size: 1em;
+	}
+
+	#upRating {
+
+		font-size: 0.6em;
+	}
+
+	#downRating {
+		font-size: 0.6em;
+	}
+
+	#statistics {
+	font-size: 0.9em;
 	}
 }
 
