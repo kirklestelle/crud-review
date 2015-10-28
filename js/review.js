@@ -58,7 +58,7 @@ var addItem = function(item) {
 	var li = $("<li></li>");
 	var reviewsSection = $("<section></section>")
 	var userReviews = $("<div class='container' id='userReviews'></div>");
-	var userTitle = $("<h4></h4>");
+	var userTitle = $("<h4 id='userTitle'></h4>");
 	var userReview = $("<h5></h5>");
 	var userRating = $("<div id='userRating' class='raty'></div>");
 	var deleteRating = $("<button id='deleteRating'><span class='glyphicon glyphicon-remove'></span></button>");
