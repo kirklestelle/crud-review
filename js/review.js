@@ -1,20 +1,26 @@
+// Initializes parse
 Parse.initialize("H4jsjopclzmBkZr3zfMRk9DrNDJpu6bDDlv6kLE2", "KB49Uq3F77aSQumFlbDjtsd7IREB5yQixXcZQMMY");
 
+// Initializes raty star rating display
 $('#rating').raty();
 
+// Initializes Review parse object
 var Review = Parse.Object.extend('Review');
 
+// Function when user clicks the subit review button
 $('form').submit(function() {
 	var review = new Review();
 	var userTitle = $("#title");
 	var userReview = $("#review");
 	
+	// Sets user's title, review, ratings, and votes
 	review.set("title", userTitle.val());
 	review.set("review", userReview.val());	
 	review.set("rating", ($("#rating").raty('score')));
 	review.set("upVotes", 0);
 	review.set("totalVotes", 0);
 
+	// Saves user's input information
 	review.save(null, {
 		success: function() {
 			userTitle.val("");
@@ -26,6 +32,7 @@ $('form').submit(function() {
 	return false;
 })
 
+// Gets user's review information
 var getData = function() {
 	var query = new Parse.Query(Review);
 	query.find({
@@ -35,11 +42,13 @@ var getData = function() {
 	})
 }
 
+// Emptys list and inputs user's new data
 var buildList = function(data) {
 	$('ol').empty();
 	var totalRatings = 0;
 	var totalReviews = 0;
 
+	// Goes through every item on the list and inputs data item
 	data.forEach(function(item){
 		addItem(item);
 		totalRatings += item.get("rating");
@@ -48,6 +57,7 @@ var buildList = function(data) {
 	$("#averageRating").raty({score: totalRatings/totalReviews, readOnly: true});
 }
 
+// Displays user's new data and retrieves previous data
 var addItem = function(item) {
 	var title = item.get("title");
 	var review = item.get("review");
@@ -55,6 +65,7 @@ var addItem = function(item) {
 	var upVotes = item.get("upVotes");
 	var totalVotes = item.get("totalVotes");
 
+	// Initializes html elements
 	var li = $("<li></li>");
 	var reviewsSection = $("<section></section>")
 	var userReviews = $("<div class='container' id='userReviews'></div>");
@@ -90,6 +101,7 @@ var addItem = function(item) {
 	userReview.text(review);
 	statistics.text(upVotes + " out of " + totalVotes + " customers found this review helpful.");
 
+	// Appends html elements to list and displays on website
 	userTitle.append(downRating, upRating);
 	userReviews.append(userTitle);
 	userReviews.append(userRating);	
